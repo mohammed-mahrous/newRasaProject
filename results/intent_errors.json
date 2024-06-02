@@ -1,0 +1,18 @@
+[
+  {
+    "text": "مذهل",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.30250027775764465
+    }
+  },
+  {
+    "text": "سيئ للغاية",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.9541921019554138
+    }
+  }
+]

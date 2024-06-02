@@ -1,0 +1,37 @@
+version: '3.1'
+intents:
+- affirm
+- bot_challenge
+- deny
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+responses:
+  utter_did_not_understand:
+  - text: من فضلك اعد ما قلته فانا لم استطع فهمك
+  utter_greet:
+  - text: اهلا بك. كيف حالك اليوم؟
+  utter_cheer_up:
+  - text: 'هذا شئ قد يبسطك اليوم:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: هل ساعد ذلك في تعديل حالتك المزاجية
+  utter_happy:
+  - text: هذا شئ رائع
+  utter_goodbye:
+  - text: مع السلامة
+  utter_iamabot:
+  - text: انا بوت مقدم لك بواسطة راسا
+  utter_unexpected_text:
+  - text: من فضلك اعد ما قلتة فانا لم استطع فهمك
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+- utter_unexpected_text
+- utter_happy
+- utter_greet
+- utter_did_not_understand
+- utter_cheer_up
+- utter_did_that_help

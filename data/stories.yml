@@ -1,0 +1,67 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - intent: mood_great
+  - action: utter_happy
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: mood_unhappy
+  - intent: affirm
+  - action: utter_happy
+  - intent: mood_great
+  - action: action_back
+
+- story: interactive_story_1
+  steps:
+  - intent: affirm
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_did_not_understand
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: greet
+  - action: utter_greet
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
